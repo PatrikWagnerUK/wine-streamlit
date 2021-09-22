@@ -30,6 +30,7 @@ sig_kern = data["model"]
 def show_page():
     st.title('Wine Recommendation Generator 1.0')
     st.subheader('Finding you the highest ranking and most similar wines backed by 6,000+ sommelier reviews.')
+    st.markdown("____")
 
 def recommend_wine(sig_kern=sig_kern):
     variety = st.sidebar.selectbox("Filter Wines by variety:", np.unique(predictors['variety']))

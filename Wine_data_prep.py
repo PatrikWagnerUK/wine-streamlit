@@ -57,7 +57,7 @@ def recommend_wine(sig_kern=sig_kern):
         s_url1 = predictors[['search_url']].iloc[position[0]].item()
         st.subheader("The " + name1.to_string(header=False, index=False))
         st.markdown(desc1.to_string(header=False, index=False))
-        st.markdown('[Purchase Wine]' + s_url1)
+        st.markdown(('[Purchase Wine]' + '(' + s_url1 + ')'))
         st.markdown("____")
 
         name2 = predictors[['name']].iloc[position[1]]
@@ -73,4 +73,4 @@ def recommend_wine(sig_kern=sig_kern):
         s_url3 = predictors[['search_url']].iloc[position[2]].item()
         st.subheader("The " + name3.to_string(header=False, index=False))
         st.markdown(desc3.to_string(header=False, index=False))
-        st.markdown('[Purchase Wine]' + s_url3)
+        st.markdown(('[Purchase Wine]' + '(' + s_url3 + ')'))

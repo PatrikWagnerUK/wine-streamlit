@@ -19,8 +19,9 @@ from sklearn.metrics.pairwise import linear_kernel, sigmoid_kernel
 #    return data
 
 s3 = boto3.resource('s3', aws_access_key_id=st.secrets["key_id"], aws_secret_access_key=st.secrets["secret_key"])
+csv_url = 'https://wineproj.s3.us-east-2.amazonaws.com/wine_pred_matrix.csv'
 data = pickle.loads(s3.Bucket("wineproj").Object("wine_model_ita.pkl").get()['Body'].read())
-predictors = pd.read_csv(s3.Bucket("wineproj").Object("wine_pred_matrix_ita.csv").get()['Body'].read())
+predictors = pd.read_csv(csv_url)
 
 #data = load_model()
 sig_kern = data["model"]

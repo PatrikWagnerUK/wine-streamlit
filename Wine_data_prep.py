@@ -28,7 +28,8 @@ sig_kern = data["model"]
 
 ## Creating function to display streamlit page
 def show_page():
-    st.title('Wine Recommendation System 1.0')
+    st.title('Wine Recommendation Generator 1.0')
+    st.subheader('An item-based recommendation system using over 6,000 sommelier reviews on the highest ranking Italian wines.')
 
 def recommend_wine(sig_kern=sig_kern):
     variety = st.sidebar.selectbox("Filter Wines by variety:", np.unique(predictors['variety']))

@@ -19,8 +19,8 @@ from sklearn.metrics.pairwise import linear_kernel, sigmoid_kernel
 #    return data
 
 s3 = boto3.resource('s3', aws_access_key_id=st.secrets["key_id"], aws_secret_access_key=st.secrets["secret_key"])
-data = pickle.loads(s3.Bucket("wineproj").Object("wine_model.pkl").get()['Body'].read())
-predictors = pd.read_csv(s3.Bucket("wineproj").Object("wine_pred_matrix.csv").get()['Body'].read())
+data = pickle.loads(s3.Bucket("wineproj").Object("wine_model_ita.pkl").get()['Body'].read())
+predictors = pd.read_csv(s3.Bucket("wineproj").Object("wine_pred_matrix_ita.csv").get()['Body'].read())
 
 #data = load_model()
 sig_kern = data["model"]
@@ -30,10 +30,8 @@ def show_page():
     st.title('Wine Recommendation System 1.0')
 
 def recommend_wine(sig_kern=sig_kern):
-    country = st.sidebar.selectbox("Filter Wines by country:", ("US", "Italy", "France", "Argentina", "Spain", "Australia", "Canada"))
-    country_filtered = predictors[(predictors['country'] == country)]
-    variety = st.sidebar.selectbox("Filter Wines by variety:", np.unique(country_filtered['variety']))
-    variety_filtered = country_filtered[(country_filtered['variety'] == variety)]
+    variety = st.sidebar.selectbox("Filter Wines by variety:", np.unique(predictors['variety']))
+    variety_filtered = predictors[(predictors['variety'] == variety)]
     #st.dataframe(variety_filtered[['name', 'variety']])
     user_wine_input = st.selectbox('Recommend me a wine similar to the:', variety_filtered['name'].sort_values(ascending=True))
 

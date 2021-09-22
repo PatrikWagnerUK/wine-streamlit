@@ -29,7 +29,7 @@ sig_kern = data["model"]
 ## Creating function to display streamlit page
 def show_page():
     st.title('Wine Recommendation Generator 1.0')
-    st.subheader('Finding you the highest ranking and most similar wines backed by 6,000+ sommelier reviews.')
+    st.subheader('Finding you the highest ranking and most relevant Italian wine recommendations. Curated by a Natural Language Processing algorithm backed by 6,000+ sommelier reviews.')
     st.markdown("____")
 
 def recommend_wine(sig_kern=sig_kern):

@@ -34,6 +34,8 @@ def show_page():
 def recommend_wine(sig_kern=sig_kern):
     variety = st.sidebar.selectbox("Filter Wines by variety:", np.unique(predictors['variety']))
     variety_filtered = predictors[(predictors['variety'] == variety)]
+    region = st.sidebar.selectbox("Filter Wines by region:", np.unique(predictors['region_1']))
+    region_filtered = predictors[(predictors['region_1'] == region)]
     #st.dataframe(variety_filtered[['name', 'variety']])
     user_wine_input = st.selectbox('Recommend me a wine similar to the:', variety_filtered['name'].sort_values(ascending=True))
 

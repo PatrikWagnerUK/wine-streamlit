@@ -54,17 +54,26 @@ def recommend_wine(sig_kern=sig_kern):
 
         name1 = predictors[['name']].iloc[position[0]]
         desc1 = predictors[['description']].iloc[position[0]]
+        s_url1 = predictors[['search_url']].iloc[position[0]]
         st.subheader("The " + name1.to_string(header=False, index=False))
         st.markdown(desc1.to_string(header=False, index=False))
+        link = '[Purchase Wine](f{search_url1})'
+        st.markdown(link, unsafe_allow_html=True)
         st.markdown("____")
 
         name2 = predictors[['name']].iloc[position[1]]
         desc2 = predictors[['description']].iloc[position[1]]
+        s_url2 = predictors[['search_url']].iloc[position[1]]
         st.subheader("The " + name2.to_string(header=False, index=False))
         st.markdown(desc2.to_string(header=False, index=False))
+        link2 = '[Purchase Wine](f{search_url2})'
+        st.markdown(link2, unsafe_allow_html=True)
         st.markdown("____")
 
         name3 = predictors[['name']].iloc[position[2]]
         desc3 = predictors[['description']].iloc[position[2]]
+        s_url3 = predictors[['search_url']].iloc[position[2]]
         st.subheader("The " + name3.to_string(header=False, index=False))
+        link3 = '[Purchase Wine](f{search_url3})'
+        st.markdown(link3, unsafe_allow_html=True)
         st.markdown(desc3.to_string(header=False, index=False))

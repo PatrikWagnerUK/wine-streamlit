@@ -32,6 +32,9 @@ def show_page():
     st.write('Built by: Patrik Wagner')
     st.write('')
     st.write('Finding you the highest ranking and most relevant Italian wine recommendations. Curated by a Natural Language Processing algorithm backed by 6,000+ sommelier reviews on Italian wines.')
+    st.write('')
+    st.write('Built with Python 3.8 and Streamlit.')
+    st.markdown(('[Base Dataset](https://www.kaggle.com/zynicide/wine-reviews?select=winemag-data_first150k.csv)'))
     st.markdown("____")
 
 def recommend_wine(sig_kern=sig_kern):

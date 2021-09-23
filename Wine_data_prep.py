@@ -29,7 +29,6 @@ sig_kern = data["model"]
 ## Creating function to display streamlit page
 def show_page():
     st.title('Italian Wine Recommender')
-    st.write('Built by: Patrik Wagner')
     st.write('')
     st.write('Finding you the highest ranking and most relevant Italian wine recommendations. Curated by a Natural Language Processing algorithm backed by 6,000+ sommelier reviews on Italian wines.')
     st.write('')
@@ -44,7 +43,7 @@ def recommend_wine(sig_kern=sig_kern):
     region = st.sidebar.selectbox("Filter Wines by region:", np.unique(variety_filtered['region_1']))
     region_filtered = variety_filtered[(variety_filtered['region_1'] == region)]
     st.sidebar.title('About Creator')
-    st.sidebar.write('Welcome wine enthusiast! My name is Patrik and I am an aspiring Data Scientist working on personal projects, such as this one, to add to my skills. Have comments or thoughts on this project? Drop me a note!')
+    st.sidebar.write('Welcome wine enthusiast! My name is Patrik Wagner and I am an aspiring Data Scientist working on personal projects, such as this one, to add to my skills. Have comments or thoughts on this project? Drop me a note!')
     st.sidebar.markdown('__patrikwagner.uk@gmail.com__')
     st.sidebar.title('Hire Me!')
     st.sidebar.markdown(('[LinkedIn](https://www.linkedin.com/in/pwagnerwork)'))

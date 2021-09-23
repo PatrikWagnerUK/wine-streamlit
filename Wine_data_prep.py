@@ -47,7 +47,7 @@ def recommend_wine(sig_kern=sig_kern):
     st.sidebar.markdown('__patrikwagner.uk@gmail.com__')
     st.sidebar.title('Hire Me!')
     st.sidebar.markdown(('[LinkedIn](https://www.linkedin.com/in/pwagnerwork)'))
-    st.sidebar.markdown(('[Download CV](https://drive.google.com/file/d/1hKdvlSkkGo__hJc6N98mvkiUkc5ngrX6/view?usp=sharing)'))
+    st.sidebar.markdown(('[Download CV](https://drive.google.com/file/d/1UY2vrpZbIu4szgMstwf9p45p79voVHvR/view?usp=sharing)'))
     st.sidebar.markdown(('[Github](https://github.com/PatrikWagnerUK)'))
 
     #st.dataframe(variety_filtered[['name', 'variety']])

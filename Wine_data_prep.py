@@ -35,10 +35,12 @@ def show_page():
     st.markdown("____")
 
 def recommend_wine(sig_kern=sig_kern):
+    st.sidebar.title('Filters')
     variety = st.sidebar.selectbox("Filter Wines by variety:", np.unique(predictors['variety']))
     variety_filtered = predictors[(predictors['variety'] == variety)]
     region = st.sidebar.selectbox("Filter Wines by region:", np.unique(variety_filtered['region_1']))
     region_filtered = variety_filtered[(variety_filtered['region_1'] == region)]
+    st.sidebar.title('About Me')
     #st.dataframe(variety_filtered[['name', 'variety']])
     user_wine_input = st.selectbox('Recommend me a wine similar to the:', variety_filtered['name'].sort_values(ascending=True))
 

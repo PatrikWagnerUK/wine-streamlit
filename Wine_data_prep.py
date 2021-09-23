@@ -42,7 +42,12 @@ def recommend_wine(sig_kern=sig_kern):
     region_filtered = variety_filtered[(variety_filtered['region_1'] == region)]
     st.sidebar.title('About Creator')
     st.sidebar.write('Welcome wine enthusiast! My name is Patrik and I am an aspiring Data Scientist working on personal projects, such as this one, to add to my skills. Have comments or thoughts on this project? Drop me a note!')
-    st.sidebar.write('patrikwagner.uk@gmail.com')
+    st.sidebar.markdown('__patrikwagner.uk@gmail.com__')
+    st.sidebar.title('Hire Me!')
+    st.sidebar.markdown('[LinkedIn](https://www.linkedin.com/in/pwagnerwork'))
+    st.sidebar.markdown('[Download CV](https://drive.google.com/file/d/1hKdvlSkkGo__hJc6N98mvkiUkc5ngrX6/view?usp=sharing'))
+
+
     #st.dataframe(variety_filtered[['name', 'variety']])
     user_wine_input = st.selectbox('Recommend me a wine similar to the:', variety_filtered['name'].sort_values(ascending=True))
 

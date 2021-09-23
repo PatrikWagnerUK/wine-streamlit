@@ -28,10 +28,10 @@ sig_kern = data["model"]
 
 ## Creating function to display streamlit page
 def show_page():
-    st.title('Wine Recommendation Generator 1.0')
+    st.title('Italian Wine Recommender')
     st.write('Built by: Patrik Wagner')
     st.write('')
-    st.write('Finding you the highest ranking and most relevant Italian wine recommendations. Curated by a Natural Language Processing algorithm backed by 6,000+ sommelier reviews.')
+    st.write('Finding you the highest ranking and most relevant Italian wine recommendations. Curated by a Natural Language Processing algorithm backed by 6,000+ sommelier reviews on Italian wines.')
     st.markdown("____")
 
 def recommend_wine(sig_kern=sig_kern):
@@ -46,7 +46,7 @@ def recommend_wine(sig_kern=sig_kern):
     st.sidebar.title('Hire Me!')
     st.sidebar.markdown(('[LinkedIn](https://www.linkedin.com/in/pwagnerwork)'))
     st.sidebar.markdown(('[Download CV](https://drive.google.com/file/d/1hKdvlSkkGo__hJc6N98mvkiUkc5ngrX6/view?usp=sharing)'))
-
+    st.sidebar.markdown(('[Github](https://github.com/PatrikWagnerUK)'))
 
     #st.dataframe(variety_filtered[['name', 'variety']])
     user_wine_input = st.selectbox('Recommend me a wine similar to the:', variety_filtered['name'].sort_values(ascending=True))

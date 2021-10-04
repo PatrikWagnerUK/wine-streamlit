@@ -52,7 +52,7 @@ def recommend_wine(sig_kern=sig_kern):
     st.sidebar.markdown(('[Technical Writeup](https://deepnote.com/@patrik-wagner/NLP-Wine-Recommendation-System-J4HbJLslTA2JtfaVElJrfg)'))
 
     #st.dataframe(variety_filtered[['name', 'variety']])
-    user_wine_input = st.selectbox('Recommend me a wine similar to the:', variety_filtered['name'].sort_values(ascending=True))
+    user_wine_input = st.sidebar.selectbox('Recommend me a wine similar to the:', variety_filtered['name'].sort_values(ascending=True))
 
 
     index = pd.Series(predictors.index, index=predictors['name']).drop_duplicates()
@@ -63,7 +63,7 @@ def recommend_wine(sig_kern=sig_kern):
     position = [i[0] for i in sigmoid_score]
 
     pd.set_option('display.max_colwidth', None)
-    if st.button("Recommend Wine"):
+    if st.sidebar.button("Recommend Wine"):
         st.header(f"Other wines to consider are: ")
 
         name1 = predictors[['name']].iloc[position[0]]

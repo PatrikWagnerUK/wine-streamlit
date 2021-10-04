@@ -42,18 +42,9 @@ def recommend_wine(sig_kern=sig_kern):
     variety_filtered = predictors[(predictors['variety'] == variety)]
     region = st.sidebar.selectbox("Filter Wines by region:", np.unique(variety_filtered['region_1']))
     region_filtered = variety_filtered[(variety_filtered['region_1'] == region)]
-    st.sidebar.title('About Creator')
-    st.sidebar.write('Welcome wine enthusiast! My name is Patrik Wagner and I am an aspiring Data Scientist working on personal projects, such as this one, to add to my skills. Have comments or thoughts on this project? Drop me a note!')
-    st.sidebar.markdown('__patrikwagner.uk@gmail.com__')
-    st.sidebar.title('Hire Me!')
-    st.sidebar.markdown(('[LinkedIn](https://www.linkedin.com/in/pwagnerwork)'))
-    st.sidebar.markdown(('[Download CV](https://drive.google.com/file/d/1UY2vrpZbIu4szgMstwf9p45p79voVHvR/view?usp=sharing)'))
-    st.sidebar.markdown(('[Github](https://github.com/PatrikWagnerUK)'))
-    st.sidebar.markdown(('[Technical Writeup](https://deepnote.com/@patrik-wagner/NLP-Wine-Recommendation-System-J4HbJLslTA2JtfaVElJrfg)'))
 
     #st.dataframe(variety_filtered[['name', 'variety']])
     user_wine_input = st.sidebar.selectbox('Recommend me a wine similar to the:', variety_filtered['name'].sort_values(ascending=True))
-
 
     index = pd.Series(predictors.index, index=predictors['name']).drop_duplicates()
     indx = index[user_wine_input]
@@ -88,3 +79,12 @@ def recommend_wine(sig_kern=sig_kern):
         st.subheader("The " + name3.to_string(header=False, index=False))
         st.markdown(desc3.to_string(header=False, index=False))
         st.markdown(('[Purchase Wine]' + '(' + s_url3 + ')'))
+
+        st.sidebar.title('About Creator')
+        st.sidebar.write('Welcome wine enthusiast! My name is Patrik Wagner and I am an aspiring Data Scientist working on personal projects, such as this one, to add to my skills. Have comments or thoughts on this project? Drop me a note!')
+        st.sidebar.markdown('__patrikwagner.uk@gmail.com__')
+        st.sidebar.title('Hire Me!')
+        st.sidebar.markdown(('[LinkedIn](https://www.linkedin.com/in/pwagnerwork)'))
+        st.sidebar.markdown(('[Download CV](https://drive.google.com/file/d/1UY2vrpZbIu4szgMstwf9p45p79voVHvR/view?usp=sharing)'))
+        st.sidebar.markdown(('[Github](https://github.com/PatrikWagnerUK)'))
+        st.sidebar.markdown(('[Technical Writeup](https://deepnote.com/@patrik-wagner/NLP-Wine-Recommendation-System-J4HbJLslTA2JtfaVElJrfg)'))

@@ -85,6 +85,6 @@ def recommend_wine(sig_kern=sig_kern):
     st.sidebar.markdown('__patrikwagner.uk@gmail.com__')
     st.sidebar.title('Hire Me!')
     st.sidebar.markdown(('[LinkedIn](https://www.linkedin.com/in/pwagnerwork)'))
-    st.sidebar.markdown(('[Download CV](https://drive.google.com/file/d/1UY2vrpZbIu4szgMstwf9p45p79voVHvR/view?usp=sharing)'))
+    st.sidebar.markdown(('[Download CV](https://drive.google.com/file/d/1WE4dQmnZf2YblTP0dqIFO3nvGr3hTwlp/view?usp=sharing)'))
     st.sidebar.markdown(('[Github](https://github.com/PatrikWagnerUK)'))
     st.sidebar.markdown(('[Technical Writeup](https://deepnote.com/@patrik-wagner/NLP-Wine-Recommendation-System-J4HbJLslTA2JtfaVElJrfg)'))

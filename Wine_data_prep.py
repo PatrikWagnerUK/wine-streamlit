@@ -81,7 +81,7 @@ def recommend_wine(sig_kern=sig_kern):
         st.markdown(('[Purchase Wine]' + '(' + s_url3 + ')'))
 
     st.sidebar.title('About Creator')
-    st.sidebar.write('Welcome wine enthusiast! My name is Patrik Wagner and I am an aspiring Data Scientist working on personal projects, such as this one, to add to my skills. Have comments or thoughts on this project? Drop me a note!')
+    st.sidebar.write('Welcome wine enthusiast! My name is Patrik Wagner and I am Data Scientist working on interesting projects, such as this one, looking for new approaches to existing challenges. Have comments or thoughts on this project? Drop me a note!')
     st.sidebar.markdown('__patrikwagner.uk@gmail.com__')
     st.sidebar.title('Hire Me!')
     st.sidebar.markdown(('[LinkedIn](https://www.linkedin.com/in/pwagnerwork)'))
